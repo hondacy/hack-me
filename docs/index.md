@@ -4,7 +4,7 @@
 
 
     ```shell
-    What is the Password? 3
+    What is the Password? 4
     ```
     **שימו לב!**
     ```shell
