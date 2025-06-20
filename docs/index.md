@@ -9,12 +9,15 @@ layout: default
         }
 </script>
 
-## ברוכים הבאים לבנק שלי!&#x202b;
+<div dir="rtl">
+## ברוכים הבאים לבנק שלי!
 
 
 ```shell
 What is the Password? 5
 ```
+</div>
+
 **שימו לב!**
 ```shell
 הסיסמה קשה לפיצוח!
