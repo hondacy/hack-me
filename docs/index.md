@@ -9,3 +9,11 @@ What is the Password?
 הסיסמה קשה לפיצוח!
 ```
 
+ <script>
+        function myFunction() {
+            alert("Hello! I am an alert box!");
+        }
+    </script>
+<button onclick="myFunction()">Try it</button>
+
+ end of file
