@@ -12,9 +12,9 @@ What is the Password?
  <script>
         function myFunction() {
             alert("Hello! I am an alert box!");
-            window.location.href = '/2';
+            window.location.href = './2';
         }
-    </script>
+</script>
 <button onclick="myFunction()">שלח</button>
 
  end of file
