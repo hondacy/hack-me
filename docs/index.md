@@ -2,7 +2,14 @@
 layout: default
 ---
 
-## ברוכים הבאים לבנק שלי!
+<script>
+        function myFunction() {
+            // alert("Hello! I am an alert box!");
+            window.location.href = './2';
+        }
+</script>
+
+## ברוכים הבאים לבנק שלי!&#x202b;
 
 
 ```shell
