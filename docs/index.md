@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+6
 <script>
         function myFunction() {
             // alert("Hello! I am an alert box!");
