@@ -2,35 +2,37 @@
 layout: default
 ---
 
-9
-
 <script>
-        function myFunction() {
-            // alert("Hello! I am an alert box!");
-            window.location.href = './2';
-        }
+    const pagesecret = 'pagesecret1323';
 </script>
 
 <div dir="rtl">
-## ברוכים הבאים לבנק שלי!
-
-
-```shell
-What is the Password? 5
-```
-</div>
-
-**שימו לב!**
-```shell
-הסיסמה קשה לפיצוח!
-```
-
-<script>
+<b>שים לב!</b><br>
+חובה להזין סיסמה כדי להעביר כסף<br>
+<!-- <script>
         function myFunction() {
             // alert("Hello! I am an alert box!");
             window.location.href = './2';
         }
-</script>
-<button onclick="myFunction()">שלח</button>
+</script> -->
+<input type="text" id="userInput">
+<!-- <button id="sendButton">שלח</button> -->
+<button id="sendButton" onclick="checkpass()">שלח</button>
 
-end of file
+</div>
+
+<script>
+    const sendButton = document.getElementById('sendButton');
+    sendButton.addEventListener('click', function() {
+        // Code to execute when the button is clicked
+        const userInputField = document.getElementById('userInput');
+        const inputValue = userInputField.value;
+
+        if (inputValue === "") {
+            window.location.href = './success';
+        } else {
+            alert("שגיאה!   אין לך הרשאות לחשבון הזה! ");
+            userInputField.value = '';
+        }
+    });
+</script>
