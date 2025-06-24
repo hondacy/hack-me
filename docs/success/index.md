@@ -11,20 +11,29 @@ layout: default
         function myFunction() {
             alert("הועבר!");
         }
+        function NextTargil() {
+            // window.location.href = './success?targil=' + targilurl;
+            // let targilInt = parseInt(targilurl +1) 
+            var url = new URL(window.location.href);
+            var nextTargilInt = url.searchParams.get("nextTargilInt");
+            window.location.href = '../?targil=' + nextTargilInt;
+        }
     </script>
 </head>
 <body>
     <div dir="rtl" style="background-image: url('../img/shtarot.png'); text-shadow: 1px 1px rgba(255, 235, 13, 0.96); padding: 9px">
         <b><h2>ההתחברות הצליחה!</h2></b>
         <center>
-        <h3>
-            <br><br>
-            <b>למי להעביר 1,000 ש״ח?</b>
-            <input type="text" id="pass" name="pass">
-            <button onclick="myFunction()">שלח 1,000 ש״ח!</button>
-        </h3>
+            <h3>
+                <br><br>
+                <b>למי להעביר 1,000 ש״ח?</b>
+                <input type="text" id="pass" name="pass">
+                <button onclick="myFunction()">שלח 1,000 ש״ח!</button>
+            </h3>
+            <br><br><br><br><br>
+            <button onclick="NextTargil()">לתרגיל הבא</button>
+            <br><br><br>
         </center>
-        <br><br><br><br><br><br><br><br>
 <br><br>
 
     </div>
