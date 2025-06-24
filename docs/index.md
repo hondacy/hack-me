@@ -14,4 +14,4 @@ layout: default
     </h3>
 </div>
 
-<script src="check_pass.js" targil="0"></script>
+<script src="./check_pass.js" targil="0"></script>

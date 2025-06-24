@@ -48,7 +48,7 @@ sendButton.addEventListener('click', function() {
     const inputValue = userInputField.value;
 
     if (check_password(inputValue)) {
-        window.location.href = './success?nextTargilInt=' + nextTargilInt;
+        window.location.href = './success.html?nextTargilInt=' + nextTargilInt;
     } else {
         alert("סיסמה שגויה!   אין לך הרשאות לחשבון הזה! ");    
         userInputField.value = '';
