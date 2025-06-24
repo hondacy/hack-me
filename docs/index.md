@@ -7,18 +7,13 @@ layout: default
 </script>
 
 <div dir="rtl">
-<b>שים לב!</b><br>
-חובה להזין סיסמה כדי להעביר כסף<br>
-<!-- <script>
-        function myFunction() {
-            // alert("Hello! I am an alert box!");
-            window.location.href = './2';
-        }
-</script> -->
-<input type="text" id="userInput">
-<!-- <button id="sendButton">שלח</button> -->
-<button id="sendButton" onclick="checkpass()">שלח</button>
-
+<h3>
+    <b>שים לב!</b><br>
+    חובה להזין את הסיסמה כדי להעביר כסף
+    <br>
+    סיסמה: <input type="text" id="userInput">
+    <button id="sendButton" onclick="checkpass()">שלח</button>
+</h3>
 </div>
 
 <script>
@@ -31,7 +26,7 @@ layout: default
         if (inputValue === "") {
             window.location.href = './success';
         } else {
-            alert("שגיאה!   אין לך הרשאות לחשבון הזה! ");
+            alert("סיסמה שגויה!   אין לך הרשאות לחשבון הזה! ");
             userInputField.value = '';
         }
     });
