@@ -3,3 +3,4 @@ title: <div dir="rtl"> <br><br> <img src="./img/encrypted.png"  width=100px alt=
 description: <div dir="rtl"> הבנק שיכול להעביר לך 1,000 ש״ח!
 display_header_text: true
 google_analytics: G-WWZHB02T6V
+default_locale: he
