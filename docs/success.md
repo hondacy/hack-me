@@ -21,6 +21,7 @@ layout: default
     </script>
 </head>
 <body>
+    {% include google-analytics.html %}
     <div dir="rtl" style="background-image: url('./img/shtarot.png'); text-shadow: 1px 1px rgba(255, 235, 13, 0.96); padding: 9px">
         <b><h2>ההתחברות הצליחה!</h2></b>
         <center>
