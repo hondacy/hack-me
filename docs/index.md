@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+{% include google-analytics.html %}  
 <div dir="rtl">
     <h3>
         <b>שים לב!</b><br>
