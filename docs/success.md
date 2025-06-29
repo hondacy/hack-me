@@ -16,7 +16,9 @@ layout: default
             // let targilInt = parseInt(targilurl +1) 
             var url = new URL(window.location.href);
             var nextTargilInt = url.searchParams.get("nextTargilInt");
-            window.location.href = './?targil=' + nextTargilInt;
+            var nameElement = document.getElementById('name');
+            var name = nameElement.value;
+            window.location.href = './?targil=' + nextTargilInt + '&name=' + name;
         }
     </script>
 </head>
@@ -28,7 +30,7 @@ layout: default
             <h3>
                 <br><br>
                 <b>למי להעביר 1,000 ש״ח?</b>
-                <input type="text" id="pass" name="pass">
+                <input type="text" id="name" name="name">
                 <button onclick="myFunction()">שלח 1,000 ש״ח!</button>
             </h3>
             <br><br><br><br><br>

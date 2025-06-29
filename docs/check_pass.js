@@ -3,16 +3,16 @@
 
 // Get next targil number from URL parameters
 var url = new URL(window.location.href);
-var targilurl = url.searchParams.get("targil");
-if (targilurl === null) {
-    targilurl = 0; // Default value if not provided
+var targilInt = url.searchParams.get("targil");
+if (targilInt === null) {
+    targilInt = 0; // Default value if not provided
 }
-let nextTargilInt = parseInt(targilurl) + 1;
+let nextTargilInt = parseInt(targilInt) + 1;
 
 
 // Get the password for the specified targil
 const passwords_hashes = [0, 57, 1691, 48690]; // [clum, Tesha, Hamishim, EchadAdShalosh]
-const pass_hash = passwords_hashes[targilurl];
+const pass_hash = passwords_hashes[targilInt];
 
 
 function hashCode(str) {
@@ -56,4 +56,5 @@ sendButton.addEventListener('click', function() {
 });
 
 // Update number of targil in page
-targilNumberElement = document.getElementById('mispar').innerHTML= "תרגיל " + targilurl;
+targilNumberElement = document.getElementById('mispar').innerHTML= "תרגיל " + targilInt;
+document.title = "Targil: " + targilInt + " - סיסמה";
