@@ -9,6 +9,7 @@ layout: default
     <title>ההתחברות הצליחה!</title>
     <script>
         function myFunction() {
+            document.title = "Targil22: " + targilInt + " - סיסמה";
             alert("הועבר!");
         }
         function NextTargil() {
