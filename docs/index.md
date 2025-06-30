@@ -21,7 +21,7 @@ layout: default
         const inputValue = userInputField.value;
 
         if (inputValue) {
-            window.location.href = './targilim.html?userName=' + inputValue;
+            window.location.href = './targilim?userName=' + inputValue;
         } else {
             alert("חייב להזין שם!");    
             userInputField.value = '';

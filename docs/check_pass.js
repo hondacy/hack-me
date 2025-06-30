@@ -30,7 +30,6 @@ function hashCode(str) {
 
 function check_password(inputValue) {
     // convert the pass to it's hash
-    //inputValue = String(inputValue);
     const input_pass_hash = hashCode(inputValue);
 
     // Check if the input value matches the password
@@ -59,13 +58,9 @@ sendButton.addEventListener('click', function() {
 });
 
 
-// From Success page:
-function popup() {
-    alert("הועבר!");
-}
+// For Success page:
+function popup() {alert("הועבר!");}
 function NextTargil() {
-    // window.location.href = './success?targil=' + targilurl;
-    // let targilInt = parseInt(targilurl +1) 
     var url = new URL(window.location.href);
     var nextTargilInt = url.searchParams.get("nextTargilInt");
     var nameElement = document.getElementById('name');
