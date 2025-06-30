@@ -70,7 +70,7 @@ function NextTargil() {
     var nextTargilInt = url.searchParams.get("nextTargilInt");
     var nameElement = document.getElementById('name');
     var name = nameElement.value;
-    window.location.href = './targilim/?targil=' + nextTargilInt + '&userName=' + userName;
+    window.location.href = './targilim?targil=' + nextTargilInt + '&userName=' + userName;
 }
 
 // Update number of targil & username in page. Need to be in the end - after pages finish to load
