@@ -51,7 +51,7 @@ sendButton.addEventListener('click', function() {
     const inputValue = userInputField.value;
 
     if (check_password(inputValue)) {
-        window.location.href = './success.html?nextTargilInt=' + nextTargilInt + '&userName=' + userName + '&targil=' + targilInt;
+        window.location.href = './success?nextTargilInt=' + nextTargilInt + '&userName=' + userName + '&targil=' + targilInt;
     } else {
         alert("סיסמה שגויה!   אין לך הרשאות לחשבון הזה! ");    
         userInputField.value = '';
@@ -70,7 +70,7 @@ function NextTargil() {
     var nextTargilInt = url.searchParams.get("nextTargilInt");
     var nameElement = document.getElementById('name');
     var name = nameElement.value;
-    window.location.href = './?targil=' + nextTargilInt + '&userName=' + userName;
+    window.location.href = './targilim/?targil=' + nextTargilInt + '&userName=' + userName;
 }
 
 // Update number of targil & username in page. Need to be in the end - after pages finish to load
