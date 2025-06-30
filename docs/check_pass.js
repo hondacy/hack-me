@@ -8,7 +8,10 @@ if (targilInt === null) {
     targilInt = 0; // Default value if not provided
 }
 let nextTargilInt = parseInt(targilInt) + 1;
-
+var userName = url.searchParams.get("userName");
+if (userName === null) {
+    userName = ""; // Default value if not provided
+}
 
 // Get the password for the specified targil
 const passwords_hashes = [0, 57, 1691, 48690]; // [clum, Tesha, Hamishim, EchadAdShalosh]
@@ -48,13 +51,28 @@ sendButton.addEventListener('click', function() {
     const inputValue = userInputField.value;
 
     if (check_password(inputValue)) {
-        window.location.href = './success.html?nextTargilInt=' + nextTargilInt;
+        window.location.href = './success.html?nextTargilInt=' + nextTargilInt + '&userName=' + userName + '&targil=' + targilInt;
     } else {
         alert("סיסמה שגויה!   אין לך הרשאות לחשבון הזה! ");    
         userInputField.value = '';
     }
 });
 
-// Update number of targil in page
+
+// From Success page:
+function popup() {
+    alert("הועבר!");
+}
+function NextTargil() {
+    // window.location.href = './success?targil=' + targilurl;
+    // let targilInt = parseInt(targilurl +1) 
+    var url = new URL(window.location.href);
+    var nextTargilInt = url.searchParams.get("nextTargilInt");
+    var nameElement = document.getElementById('name');
+    var name = nameElement.value;
+    window.location.href = './?targil=' + nextTargilInt + '&userName=' + userName;
+}
+
+// Update number of targil & username in page. Need to be in the end - after pages finish to load
 targilNumberElement = document.getElementById('mispar').innerHTML= "תרגיל " + targilInt;
-document.title = "Targil: " + targilInt + " - סיסמה";
+document.title = "Targil: " + targilInt + " - " + userName;

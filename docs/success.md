@@ -7,21 +7,6 @@ layout: default
 <head>
     <meta charset="UTF-8">
     <title>ההתחברות הצליחה!</title>
-    <script>
-        function myFunction() {
-            document.title = "Targil22: " + targilInt + " - סיסמה";
-            alert("הועבר!");
-        }
-        function NextTargil() {
-            // window.location.href = './success?targil=' + targilurl;
-            // let targilInt = parseInt(targilurl +1) 
-            var url = new URL(window.location.href);
-            var nextTargilInt = url.searchParams.get("nextTargilInt");
-            var nameElement = document.getElementById('name');
-            var name = nameElement.value;
-            window.location.href = './?targil=' + nextTargilInt + '&name=' + name;
-        }
-    </script>
 </head>
 <body>
     {% include google-analytics.html %}
@@ -32,14 +17,15 @@ layout: default
                 <br><br>
                 <b>למי להעביר 1,000 ש״ח?</b>
                 <input type="text" id="name" name="name">
-                <button onclick="myFunction()">שלח 1,000 ש״ח!</button>
+                <button onclick="popup()">שלח 1,000 ש״ח!</button>
             </h3>
             <br><br><br><br><br>
             <button onclick="NextTargil()">לתרגיל הבא</button>
             <br><br><br>
         </center>
-<br><br>
-
+    <br><br>
     </div>
+    <script src="./check_pass.js" source="targilim"></script>
+
 </body>
 </html>
